@@ -53,6 +53,8 @@ def save_results_to_file(dispatch_date, dispatch_id, perfect_orders, imperfect_o
 def main():
     options = Options()
     options.add_argument("--blink-settings=imagesEnabled=false")
+    options.add_argument("--log-level=3")
+    options.add_argument("--disable-infobars")
     driver = webdriver.Chrome(options=options)
 
     cookies_file = "cookies.pkl"
