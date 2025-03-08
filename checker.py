@@ -78,7 +78,6 @@ def main():
 
                 for page, orders_count in dispatch_info['pages'].items():
                     page_prefix = f"{dispatch_url}?page={page}"
-                    print(page_prefix)
                     driver.get(page_prefix)
                     dispatch_processor.set_per_page_to_max()
                     links = dispatch_processor.get_order_links()
